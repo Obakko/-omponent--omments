@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Comments</title>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../src/style/style.css" rel="stylesheet" />
+  </head>
+
+  <body class="page-body">
+    <header class="page-header"></header>
+    <aside class="page-aside"></aside>
+    <main class="page-main">
+      <section class="main-content">
+        <div class="main-content__item content-1"></div>
+        <div class="main-content__item content-2"></div>
+        <div class="main-content__item content-3"></div>
+        <div class="main-content__item content-4"></div>
+        <div class="main-content__item content-5"></div>
+        <div class="main-content__item content-6"></div>
+        <div class="main-content__item content-7"></div>
+        <div class="main-content__item content-8"></div>
+      </section>
+      <section class="main-baner">
+        <div class="baner-content"></div>
+      </section>
+      <section class="block-comments">
+        <header class="comments-header">
+          <h1 class="comments-header__heading heading-comments">
+            Коментарии <span class="heading-comments--number">(80)</span>
+          </h1>
+          <div class="sort-comments">
+            <p class="sort-comments__list sort-list">По количеству оценок</p>
+            <ul class="sort-list--visability">
+              <li class="sort-list__item">По дате</li>
+              <li class="sort-list__item">По количеству оценок</li>
+              <li class="sort-list__item">По актуальности</li>
+              <li class="sort-list__item">По количеству ответов</li>
+            </ul>
+          </div>
+          <p class="sort-comments__favorites">Избранное</p>
+        </header>
+        <div class="user block-comments--input">
+          <div class="comments-user--avatar">
+            <img
+              src="https://i.picsum.photos/id/103/2592/1936.jpg?hmac=aC1FT3vX9bCVMIT-KXjHLhP6vImAcsyGCH49vVkAjPQ"
+              width="61px"
+              height="61px"
+              alt="avatar"
+            />
+          </div>
+          <div class="user-form">
+            <p class="user-name">Roman Saburski</p>
+            <p class="number-lines">Макс. 1000 символов</p>
+            <textarea wrap="soft" class="text-comments"></textarea>
+          </div>
+          <button type="button" class="button-comments">Отправить</button>
+        </div>
+        <div class="section-message">
+          <div class="massage-user">
+            <div class="user-avatar">
+              <img
+                src="https://i.picsum.photos/id/103/2592/1936.jpg?hmac=aC1FT3vX9bCVMIT-KXjHLhP6vImAcsyGCH49vVkAjPQ"
+                width="61px"
+                height="61px"
+                alt="avatar"
+              />
+            </div>
+            <div class="massage-block">
+              <div class="massage-block__data">
+                <span class="data-name">Roman Saburski</span>
+                <span class="data-answer-for"></span>
+                <div class="data-arrow">
+                  <img
+                    class="data-icon"
+                    src="../src/image/massege-answer.png"
+                    width="22"
+                    height="22"
+                    alt="arrow"
+                  /><span>Roman Saburski</span>
+                </div>
+                <span class="data-message">15.01 13:55</span>
+              </div>
+              <p class="massage-text">
+                Самое обидное когда сценарий по сути есть - в виде книг, где нет
+                сюжетных дыр, всё логично, стройное повествование и достаточно
+                взять и экранизировать оригинал как это было в первых фильмах с
+                минимальным количеством отсебятины и зритель с восторгом примет
+                любой такой фильм и сериал, однако вместо этого 'Кольца власти'
+                просто позаимствовали имена из оригинала, куски истории, мало
+                связанные между собой и выдали очередной среднячковый сериал на
+                один раз в лучшем случае.
+              </p>
+              <div class="massage-footer">
+                <div class="data-arrow">
+                  <img
+                  class="data-icon"
+                    src="../src/image/massege-answer.png"
+                    width="22"
+                    height="22"
+                    alt="arrow"
+                  /><span>Ответить
+                </div>
+                <div class="data-favorite">
+                  В избранное
+                </div>
+                <div>
+                  <button class="like-inc like-button">-</button
+                  ><span class="like-number">3</span
+                  ><button class="like-dec like-button">+</button>
+                </div>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="../src/module/textarea.js"
+    <script  src="../src/index.js"></script>
+  </body>
+</html>
