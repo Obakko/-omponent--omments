@@ -1,43 +1,49 @@
 class SectionAddBlock {
-    textArea: HTMLTextAreaElement | null
-    buttonAdd: HTMLButtonElement | null
+    textArea: HTMLTextAreaElement | null;
+    buttonAdd: HTMLButtonElement | null;
     numberLines: HTMLParagraphElement | null
     constructor() {
         this.textArea = document.querySelector('.text-comments'),
-            this.buttonAdd = document.querySelector('.button-comments'),
-            this.numberLines = document.querySelector('.number-lines')
+        this.buttonAdd = document.querySelector('.button-comments'),
+        this.numberLines = document.querySelector('.number-lines')
+    }
+
+    writeNumber = (num: number | undefined = undefined): void => {
+        if (!this.numberLines) return
+        if (!num) {
+            this.numberLines.innerText = `Макс. 1000 символов`
+        } else {
+            this.numberLines.innerText = `${num}/1000`
+            if(num>1000){this.numberLines.style.color='red'}else{
+                this.numberLines.removeAttribute('style')
+            }
+        }
     }
 
     textAreaResize = (): void => {
-        if (!this.textArea || !this.numberLines) return
-
+        if (!this.textArea) return
         const valueLength = this.textArea.value.length
-
         if (valueLength >= 1) {
-            this.numberLines.innerText = `${valueLength}/1000`
+            this.writeNumber(valueLength)
             if (valueLength > 1000) {
+                this.buttonAdd?.classList.add('number-lines--danger')
                 this.toggleButton(false)
             } else {
-                this.toggleButton()
+                this.toggleButton(true)
+                this.buttonAdd?.classList.remove('number-lines--danger')
             }
-        } else { this.toggleButton(false) }
+        } else {
+            this.writeNumber()
+            this.toggleButton(false)
+            this.buttonAdd?.classList.remove('number-lines--danger')
+        }
         this.textArea.style.height = ""
-        this.textArea.style.height = this.textArea.scrollHeight + "px";
+        this.textArea.style.height = this.textArea.scrollHeight + 'px';
     }
 
     toggleButton = (id: boolean = true): void => {
         if (!this.buttonAdd) return
-        id ? this.buttonAdd.classList.add('button-active') : this.buttonAdd.classList.add('button-active')
-    }
-
-    giveResult = ():string|undefined => {
-        if (!this.textArea?.value||this.textArea?.value.length > 1000)return
-        return this.textArea.value
-    }
-
-    addTime = ():string => {
-        const data:Date = new Date();
-        return`${data.getDate()}.${data.getMonth()+1} ${data.getHours()}:${data.getMinutes()}`
+        id ? this.buttonAdd.classList.add('button-active') : this.buttonAdd.classList.remove('button-active')
     }
 }
 
