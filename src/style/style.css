@@ -1,7 +1,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 p,
 h1 {
@@ -9,10 +10,18 @@ h1 {
 }
 
 .page-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   text-align: center;
   height: 100%;
   min-width: 320px;
@@ -29,7 +38,9 @@ html {
 }
 .page-main {
   max-width: 1022px;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 0 10px;
   margin: 0 auto;
 }
@@ -49,9 +60,14 @@ html {
 }
 
 .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 10px;
 }
 
@@ -74,9 +90,14 @@ html {
 }
 
 .comments-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   margin-bottom: 32px;
   padding-top: 20px;
 }
@@ -105,7 +126,8 @@ html {
   width: 229px;
   text-align: start;
   background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 5px 22px 0px 30px;
   margin: 0;
@@ -124,7 +146,9 @@ html {
   padding-top: 10px;
   display: block;
   position: relative;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .sort-comments:hover .sort-list--visability {
   display: block;
@@ -151,7 +175,9 @@ html {
   background-image: url(https://img.icons8.com/material-sharp/512/give-way.png);
   background-size: contain;
   background-repeat: no-repeat;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   opacity: 0.4;
   border: none;
   height: 15px;
@@ -160,13 +186,19 @@ html {
 }
 .button_order {
 
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+
+      -ms-transform: rotate(180deg);
+
+          transform: rotate(180deg);
 }
 .sort-comments__favorites--text,
 .sort-comments__list {
   border-bottom: 1px solid;
 }
 .sort-comments__favorites {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .sort-comments__favorites::after {
@@ -206,15 +238,25 @@ html {
   top: 4px;
 }
 .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .comments-user--avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-right: 245px;
 }
 .comments-user--avatar img {
@@ -227,11 +269,19 @@ html {
 }
 
 .user-form {
-  flex-grow: 2;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
   min-height: 98px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-left: 91px;
 }
 .user-name {
@@ -273,7 +323,9 @@ html {
   display: block;
   width: 100%;
   min-height: 61px;
-  align-self: stretch;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   overflow: hidden;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
@@ -281,7 +333,8 @@ html {
   line-height: 17px;
   color: #000000;
   border: 0;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 10px 5px;
   font-size: 18px;
@@ -291,7 +344,8 @@ html {
 }
 
 .text-comments:active {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
@@ -302,7 +356,9 @@ html {
   font-size: 18px;
   border: none;
   border-radius: 5px;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: 61px;
   margin-left: 30px;
   min-width: 212px;
@@ -316,18 +372,28 @@ html {
 }
 
 .button-active:hover {
-  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+          box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
 }
 
 .massage-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .user-avatar {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 .user-avatar img{
   position: absolute;
@@ -344,9 +410,15 @@ html {
 }
 
 .massage-block__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin-bottom: 10px;
 }
 
@@ -436,20 +508,28 @@ html {
 
 .massage-text {
   display: block;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: start;
   margin-bottom: 15px;
 }
 
 .massage-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 30px;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .data-likes {
   display: inline-block;
-  align-self: stretch;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
 }
 .like-button {
   display: inline-block;
@@ -474,7 +554,9 @@ html {
 @media (max-width: 321px) {
   .page-main {
     width: 100%;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     padding: 0 10px;
     margin: 0;
   }
@@ -484,9 +566,14 @@ html {
   }
   
   .main-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 20px;
   }
   
@@ -505,7 +592,9 @@ html {
   }
 
   .comments-header {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin-bottom: 33px;
     padding-top: 13px;
   }
@@ -519,7 +608,9 @@ html {
     padding:0;
     display: block;
     position: relative;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   
   .sort-comments__button {
@@ -532,13 +623,21 @@ html {
   }
 
   .user {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .comments-user--avatar {
     margin: 0 0 11px;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .comments-user--avatar img{
     top:-14px;
@@ -558,7 +657,10 @@ html {
     left:45px;
   }
   .user-form{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin: 0;
   }
   .text-comments{
@@ -575,8 +677,11 @@ html {
 
   .user-avatar {
     margin: 0 0 15px;
-    flex-wrap: wrap;
-    align-items: baseline;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     min-height: 35px;
   }
 
@@ -596,11 +701,15 @@ html {
   }
   .massage-footer {
     font-size: 16px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .data-answer{
     margin: 0 15px 0 0;
-    order: 4;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
     margin: 5px auto 0;
   }
   .data-favorite{
@@ -609,9 +718,16 @@ html {
     padding-left: 30px;
   }
   .block-likes {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-left: 11px;
   }
   .like-number{
@@ -622,7 +738,9 @@ html {
     height: 19px;
   }
   .answer-btn{
-    order: 0;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
     margin: 0;
   }
 }
