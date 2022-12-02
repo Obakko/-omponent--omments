@@ -72,7 +72,6 @@ class Block {
         if (!answerBtn) return
         answerBtn.classList.toggle('answer-ok')
         this.answerStatus ? this.answerStatus = false : this.answerStatus = true
-
     }
 
     conversionTime = () => {

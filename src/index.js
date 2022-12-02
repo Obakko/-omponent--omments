@@ -76,6 +76,7 @@ class Comments {
             return { id: this.id, avatar: this.avatar, text: value, name: this.name, data: addTime() };
         };
         this.addNewBlock = () => {
+            var _a;
             if (!this.name)
                 return;
             const state = this.giveResult();
@@ -88,10 +89,9 @@ class Comments {
                 this.objElement[indx].render();
             }
             else {
-                const newArr = this.objElement[indxAnsw].arr;
-                if (!newArr)
-                    return;
-                newArr.push(new Block(state.id, state.text, state.avatar, state.data, state.name));
+                if (!this.objElement[indxAnsw].arr)
+                    this.objElement[indxAnsw].arr = [];
+                (_a = this.objElement[indxAnsw].arr) === null || _a === void 0 ? void 0 : _a.push(new Block(state.id, state.text, state.avatar, state.data, state.name));
                 this.objElement[indxAnsw].render(true);
                 this.objElement[indxAnsw].toogleAnswer();
             }

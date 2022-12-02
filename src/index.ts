@@ -100,9 +100,8 @@ class Comments {
             const indx = this.objElement.length - 1
             this.objElement[indx].render()
         } else {
-            const newArr = this.objElement[indxAnsw].arr
-            if (!newArr) return
-            newArr.push(new Block(state.id, state.text, state.avatar, state.data, state.name))
+            if (!this.objElement[indxAnsw].arr) this.objElement[indxAnsw].arr = []
+            this.objElement[indxAnsw].arr?.push(new Block(state.id, state.text, state.avatar, state.data, state.name))
             this.objElement[indxAnsw].render(true)
             this.objElement[indxAnsw].toogleAnswer()
         }
@@ -115,6 +114,7 @@ class Comments {
     toogleAnswer = (e: Event): void => {
         const target: HTMLElement = <HTMLElement>e.target
         const idx = this.extractId(target.id)
+    
         const idxObj = this.objElement.findIndex((el) => el.id == idx ? true : false)
         const idxTrue = this.objElement.findIndex((el) => el.answerStatus)
         if (idxTrue > -1) this.objElement[idxTrue].toogleAnswer()
